@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Trabalhando com links</title>
+</head>
+<body>
+    <h1>Usando links externos</h1> <!--quando for um link externo sempre usar o target="_blank" e o rel="external" para que a sua pagina nao seja sobreposta (abrir uma nova aba)e o usuario ainda tenha acesso a ela, caso contrario, ficara muito facil de o usuario nunca mais voltar para a sua pagina.-->
+    <p>Vc pode acessar o meu <a href="https://gustavoguanabara.github.io" target="_blank" rel="external">repositorio publico no GitHub</a>.</p> <!--da pra perceber que quando eu clico no link desse topica, se abre uma nova aba-->
+    <p>vc tambem pode acessar o meu <a href="https://youtube.com/cursoemvideo">canal gratuito no youtube</a>.</p> <!--nao abre uma nova aba-->
+    <h1>usando links internos</h1> 
+    <p>Esta e a primeira pagina do site, se vc quiser pode acessar tbm a minha <a href="pag002.html" rel="next" target="_self">segunda pagina</a></p> <!-- o rel="next/prev" nao serve para quem esta vendo o site e sim e um mecanismo interno, para que a sequencia fique correta na hora de passar de pagina/topicos-->
+    <p>Vc tambem pode acessar a nossa <a href="noticias/pag003.html" rel="next" target="_self">pagina de noticias</a></p> <!--Existe uma target que e usado para para link interno, mas nao e necessario. se eu quiser, eu preciso colocar o _self-->
+
+    <h1>Links para download</h1>
+    <ul>
+        <li><a href="livros/tccpronto.pdf" download="tccpronto.pdf" type="application/pdf">Baixar livro em PDF</a></li> <!--para baixar arquivo em pdf automaticamente depende do navegador, pois geralmente eles abrem um uma nova aba, pois reconhecem o pdf // existe um site que tem todos os types para midia IANA-->
+        <li><a href="livros/tccpronto.zip" download="tccpronto.zip" type="application/zip">Livro compactado em ZIP</a></li> <!--Para criar um arquivo zip do pdf, eu tenho que ir no arquivo em pdf e escolher a opcao compress/compactar arquivo, e a partir disso gera o file em zip.-->
+    </ul>
+    <h1 id="top">Links to sections on the same page</h1>
+    <section>
+        <ul>
+            <li><a href="#section1">#section1</a></li>
+            <li><a href="#section2">#section2</a></li>
+            <li><a href="#section3">#section3</a></li>
+        </ul>
+    </section>
+    <section id="#section1">
+        <h2>(#section1) Section 1</h2>
+        <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Esse praesentium nemo voluptatem eligendi ad quae, accusantium omnis in, adipisci amet illo molestias odio, commodi maxime beatae sapiente. Deserunt, omnis iste?
+            Lorem ipsum dolor sit amet consectetur adipisicing elit. Sed optio quis inventore quasi perspiciatis maiores dolores quod ratione nostrum. Assumenda, neque doloremque. Quos itaque cum quod eveniet numquam veniam reiciendis. Lorem ipsum dolor sit, amet consectetur adipisicing elit. Et, rem illo dolore dolorum, quisquam quae molestias recusandae odit doloribus consectetur natus esse possimus a reiciendis laboriosam. Vitae neque laboriosam debitis! Lorem ipsum dolor sit amet consectetur, adipisicing elit. At magnam amet minus aliquid in a non quisquam? Sapiente atque sit alias! Saepe officia odio temporibus ut eligendi quod sapiente delectus.
+        </p>
+    </section>
+    <section id="#section2">
+        <h2>(#section2) Section 2</h2>
+        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Veritatis, harum atque repellendus, qui magnam reprehenderit impedit neque tempore, architecto esse non deserunt tenetur in hic optio quibusdam! Quis, facilis hic?
+            Lorem ipsum dolor, sit amet consectetur adipisicing elit. Aliquid sit saepe voluptatem nemo iste, ipsa corrupti, maiores excepturi rem cum autem nam explicabo, officia aut similique repellendus eligendi laudantium consequuntur. Lorem ipsum dolor sit amet consectetur, adipisicing elit. Maiores nulla necessitatibus, recusandae qui voluptatem corrupti officiis laudantium repudiandae sunt quis repellat beatae voluptatum? Necessitatibus iusto alias hic commodi, dolorem maiores. Lorem ipsum dolor sit amet consectetur adipisicing elit. Quos dolorum ullam animi aspernatur atque maiores quisquam! Cum nam corporis dolorum suscipit minus expedita amet necessitatibus dolores maxime iste, ratione quidem!
+        </p>
+    </section>
+    <section id="#section3">
+        <h2>(#section3) Section 3</h2>
+        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Odio reprehenderit at explicabo exercitationem rerum id quas corporis ea natus perferendis dolores et adipisci inventore, vitae a illo dolorum, maxime vel!
+            Lorem, ipsum dolor sit amet consectetur adipisicing elit. Voluptatibus fugiat aut minus maxime odit expedita magnam velit architecto doloribus, eligendi quibusdam dolore facere facilis eius? Sequi, illo voluptatem? Ullam, consequuntur. Lorem ipsum dolor sit amet consectetur, adipisicing elit. Nesciunt aperiam modi tempore facilis facere hic minima laboriosam assumenda perferendis illum quos tempora magni dolorum, nisi labore molestias veritatis commodi exercitationem. Lorem ipsum dolor sit amet consectetur adipisicing elit. Dicta, natus. Quidem, amet corporis enim nihil aliquam, voluptatibus adipisci quia autem suscipit totam eaque. Praesentium sed delectus consequuntur in vero quidem.
+        </p>
+    </section>
+</body>
+</html>

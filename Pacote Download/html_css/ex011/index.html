@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Midias em HTML5</title>
+</head>
+<body>
+    <h1>Imagens dinamicas</h1>
+    <p>tente abrir esse site em varios dispositivos diferentes ou simplesmente aumemte e diminua o tamanho do seu navegador </p>
+    <picture> <!--A tag source media type serve para fazer com que a imagem seja dinamica, ou seja, se o usuario abrir uma pagina e a tela for grande, a imagem grande vai aparecer, caso ele abra em outro dispositivo ou a tela seja media, a imagem media aparece e assim acontece tb com a imagem pequena. Isso serve para evitar a barra de rolagem, pois eh algo bem incomodo. As tags precisam estar em ordem, uma dica eh comecar com a imagem grande sempre e acima ir colocandos os source media type para ir organizando o codigo. A base (img src) eh a imagem padrao que eu quero carregar-->
+        <source media="(max-width:750px )" srcset="imagens/foto-p.png" type="image/png">
+        <source media="(max-width:1050px )" srcset="imagens/foto-m.png" type="image/png">
+        <img src="imagens/foto-g.png" alt="Imagem flexivel">
+    </picture>
+    <h1>Reproduzindo audio</h1>
+    <p>vamos aprender a reproduzir audios em html5</p>
+    <!-- a tag a seguir nao funciona muito bem e por isso devemos usar a tag abaixo do comentario. <audio src="midia/happy-mistake.mp3" controls autoplay></audio>...Muitos navegadores nao tem compatibilidade com mp3 e por isso que usamos outros tipos de reprodutor (MP3 WAV e OGG)-->
+
+    <audio preload="metadata" autoplay controls loop>
+        <source src="midia/happy-mistake.mp3" type="audio/mpeg">
+        <source src="midia/happy-mistake.ogg" type="audio/ogg"> <!-- para colocar essas outras opcoes, devemos primeiro fazer a conversao do audio com um conversor e depois aplicar em html-->
+        <source src="midia/happy-mistake.wav" type="audio/wav"> <!--nao usar o wav pq eh muito pesado. nunca usar-->
+        <p>Infelizmente seu navegador nao consegue reproduzir audio.<a href="midia/happy-mistake.mp3"> Clique aqui para baixar o arquivo MP3</a></p>
+    </audio>
+    
+</body>
+</html>
